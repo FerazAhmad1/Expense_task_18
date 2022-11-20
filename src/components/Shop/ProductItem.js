@@ -8,7 +8,7 @@ const ProductItem = (props) => {
   const { title, price, description } = props;
 
   const addClickHandler = () => {
-    dispatch(totalItem(props));
+    dispatch(totalItem({ ...props, quantity: 1 }));
   };
 
   return (
